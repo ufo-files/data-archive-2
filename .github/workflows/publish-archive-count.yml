@@ -1,0 +1,47 @@
+name: Publish live archive count
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-archive-count
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish archive-count.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout counter
+        uses: actions/checkout@v5
+        with:
+          filter: blob:none
+          sparse-checkout: .github/scripts
+
+      - name: Build live count
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
+          python3 .github/scripts/build_archive_count.py --output archive-count.json
+
+      - name: Validate JSON
+        run: python3 -m json.tool archive-count.json > /dev/null
+
+      - name: Publish browser-readable JSON
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/publish_archive_count.py archive-count.json
+
+      - name: Report count
+        run: |
+          count=$(python3 -c 'import json; print(json.load(open("archive-count.json"))["count"])')
+          echo "Published archive-count.json with ${count} source files." >> "$GITHUB_STEP_SUMMARY"
