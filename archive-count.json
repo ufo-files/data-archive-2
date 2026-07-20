@@ -21,15 +21,15 @@
   },
   "count": 31945,
   "excluded": {
-    "non_archive_files": 491,
+    "non_archive_files": 488,
     "zip_files": 7
   },
-  "generated_utc": "2026-07-20T15:15:54.266150Z",
+  "generated_utc": "2026-07-20T15:16:23.854886Z",
   "repository": "ufo-files/data-archive shards",
   "revisions": {
     "data-archive": "47f2fdba72ce9050b94bf0834ec583543678714e",
     "data-archive-1": "895582fe3bec486233dc65188c9abd1a659d059c",
-    "data-archive-2": "4ba535439aae7423e51f6f66be2b86c8efdfac9f"
+    "data-archive-2": "889fd0bd7cc383b88b28a8bec4400994aed4410d"
   },
   "schema_version": 2,
   "shards": [
