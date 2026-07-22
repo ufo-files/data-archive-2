@@ -2,34 +2,34 @@
   "by_source": {
     "AARO-UAP-Records": 21,
     "American-Alchemy": 2,
-    "Black-Vault-UFO": 4344,
+    "Black-Vault-UFO": 4345,
     "DOE-NNSA-UAP-UFO": 12,
     "DPIArchive": 6450,
     "FBI-Vault-UFO": 35,
     "Legacy-Documents": 52,
     "NSA-UFO-FOIA": 161,
-    "National-Archives-UAP-Bulk": 26047,
+    "National-Archives-UAP-Bulk": 26146,
     "Steven-Greer-Document-Library": 144,
     "War-Gov-PURSUE": 268,
     "wikileaks": 8
   },
   "by_type": {
     "audio": 42,
-    "documents": 15548,
-    "images": 21831,
+    "documents": 15549,
+    "images": 21930,
     "videos": 123
   },
-  "count": 37544,
+  "count": 37644,
   "excluded": {
     "non_archive_files": 489,
     "zip_files": 7
   },
-  "generated_utc": "2026-07-22T07:42:54.190052Z",
+  "generated_utc": "2026-07-22T13:03:31.380008Z",
   "repository": "ufo-files/data-archive shards",
   "revisions": {
     "data-archive": "47f2fdba72ce9050b94bf0834ec583543678714e",
     "data-archive-1": "895582fe3bec486233dc65188c9abd1a659d059c",
-    "data-archive-2": "f966630a6f6a3bba67ddf2ff27965bf2bf596c61"
+    "data-archive-2": "2f2b92595622e7905f19d17a9e12bd09ae60e05c"
   },
   "schema_version": 2,
   "shards": [
@@ -37,5 +37,5 @@
     "data-archive-1",
     "data-archive-2"
   ],
-  "total_files": 37544
+  "total_files": 37644
 }
